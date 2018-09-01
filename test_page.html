@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+
+<html>
+<body>
+
+        <style>
+                body { 
+                    background-color: #31445a;
+                    
+                }
+
+                div.data_div {
+                     outline: 2px dashed #aabed4;
+                     margin: 5px 5px 5px 5px;
+                     min-width: 300px;
+                     min-height: 300px;
+                }
+
+                div.content{
+
+                    overflow-x:scroll;
+                    overflow:hidden;
+                    min-width: 640px;
+                     min-height: 512px;
+                }
+
+     
+ </style>                
+
+<div id="top_bar" style="width:100%; height:50%">
+        <br style="clear:both;"/>
+        <br style="clear:both;"/>
+        <br style="clear:both;"/>
+</div>
+
+<div id="schem_and_plot" class="content" style="width:100%; height:100%">
+
+    <div class="data_div" style="width:48%; height:100%; float:left">
+        <canvas id="schem_canvas" style="width:100%; height:100%; min-height: 300px"></canvas>
+    </div>
+
+    <div class="data_div" style="width:48%; height:100%; float:right">
+            <canvas id="chart_canvas"></canvas>
+    </div>
+    <br style="clear:both;"/>
+</div>
+<script src="schObj.js"></script>
+<script src="numjs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="TOF.js"></script>
+</body>
+</html>
