@@ -26,7 +26,13 @@
                 }
 
      
- </style>                
+ </style>       
+ 
+ 
+
+
+
+
 
 <div id="top_bar" style="width:100%; height:50%">
         <br style="clear:both;"/>
@@ -36,15 +42,36 @@
 
 <div id="schem_and_plot" class="content" style="width:100%; height:100%">
 
-    <div class="data_div" style="width:48%; height:100%; float:left">
-        <canvas id="schem_canvas" style="width:100%; height:100%; min-height: 300px"></canvas>
+    <div class="data_div" style="width:48%; height:100%; min-height: 500px; float:left">
+            <object data="Images/camera.svg" id="alphasvg"></object>
+           
+
     </div>
 
-    <div class="data_div" style="width:48%; height:100%; float:right">
-            <canvas id="chart_canvas"></canvas>
+    <div class="data_div" style="width:48%; height:100%;  min-height: 500px; float:right">
+            <canvas id="chart_canvas" style="min-height: 500px;"></canvas>
     </div>
     <br style="clear:both;"/>
 </div>
+
+<script>
+        var a = document.getElementById("alphasvg");
+
+        // It's important to add an load event listener to the object,
+        // as it will load the svg doc asynchronously
+        a.addEventListener("load",function(){
+
+            // get the inner DOM of alpha.svg
+            
+            var svgDoc = a.contentDocument;
+            debugger
+            // get the inner element by id
+           // var delta = svgDoc.getElementById("delta");
+            // add behaviour
+        }, false);
+        
+        </script>
+
 <script src="schObj.js"></script>
 <script src="numjs.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>

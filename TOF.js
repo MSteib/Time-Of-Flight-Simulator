@@ -306,28 +306,25 @@ function fitToContainer(canvas){
   }
 
 
-var schem_canavs = document.getElementById("schem_canvas");
-
-
-
+/*var schem_canavs = document.getElementById("schem_canvas");
 fitToContainer(schem_canavs)
 
 
 
 var ctx = schem_canavs.getContext("2d");
 ctx.fillStyle = "#FF0000";
-ctx.strokeRect(0,0,150,75);
 
 
-var sch1 = new schObj("test", 1, 100, 100, 1,1)
 
-sch1.drawObject = new function(){
-    ctx.strokeRect(sch1.x,sch1.y, sch1.x+sch1.width,sch1.y+sch1.height);
-    console.log("We did it")
+var sch1 = new schObj("test", 20, 0, 0, 350,350)
+sch1.set_svg('Images/camera.svg')
+sch1.draw_image(ctx)
 
-}
 
-sch1.drawObject
+
+
+
+*/
 window.onload = function() {
     var ctx = document.getElementById('chart_canvas').getContext('2d');
     window.myLine = new Chart(ctx, config);
