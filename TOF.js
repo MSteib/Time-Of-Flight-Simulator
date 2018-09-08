@@ -195,16 +195,16 @@ var config = {
         labels:depths,
         datasets: [{
             label: 'Depth Resolution',
-            backgroundColor: 'rgba(53, 130, 177, 0.9)',
-            borderColor: 'rgba(53, 130, 177, 0.9)',
+            backgroundColor: 'rgba(53, 130, 177, 1)',
+            borderColor: 'rgba(53, 130, 177, 1)',
             data: depth_res,
             fill: false,
             yAxisID: 'y-axis-1',
         }, {
             label: 'Energy Per Bit',
             fill: false,
-            backgroundColor: 'rgba(164, 134, 42, 0.9)',
-            borderColor: 'rgba(164, 134, 42, 0.9)',
+            backgroundColor: 'rgba(164, 134, 42, 1)',
+            borderColor: 'rgba(164, 134, 42, 1)',
             data: e_per_b,
             yAxisID: 'y-axis-2',
         }]
@@ -215,7 +215,7 @@ var config = {
         title: {
             display: true,
             text: 'TOF Camera Depth Resolution',
-            fontColor: 'rgba(210, 210, 210, 1)',
+            fontColor: 'rgba(255, 255, 255, 1)',
             fontSize: 18
         },
         tooltips: {
@@ -239,17 +239,17 @@ var config = {
                 display: true,
 
                 ticks: {
-                    fontColor: 'rgba(210, 210, 210, 1)',
+                    fontColor: 'rgba(255, 255, 255, 1)',
                     fontSize: 15
                 }, 
                 scaleLabel: {
                     display: true,
                     labelString: 'Distance (m)',
-                    fontColor: 'rgba(210, 210, 210, 1)',
+                    fontColor: 'rgba(255, 255, 255, 1)',
                     fontSize: 20
                 },
                 gridLines: {
-                    color: 'rgba(180, 180, 180, 1)' // makes grid lines from y axis red
+                    color: 'rgba(255, 255, 255, 1)' // makes grid lines from y axis red
                   }
             }],
             yAxes: [{
@@ -258,17 +258,17 @@ var config = {
 				id: 'y-axis-1',
 
                 ticks: {
-                    fontColor: 'rgba(210, 210, 210, 1)',
+                    fontColor: 'rgba(255, 255, 255, 1)',
                     fontSize: 15
                 },
                 scaleLabel: {
                     display: true,
                     labelString: 'Depth Resolution (cm)',
-                    fontColor: 'rgba(210, 210, 210, 1)',
+                    fontColor: 'rgba(53, 130, 177, 1)',
                     fontSize: 20
                 },
                 gridLines: {
-                    color: 'rgba(180, 180, 180, 1)' // makes grid lines from y axis red
+                    color: 'rgba(255, 255, 255, 1)' // makes grid lines from y axis red
                   }
             },
             {
@@ -276,17 +276,17 @@ var config = {
                 position: 'right',
 				id: 'y-axis-2',
                 ticks: {
-                    fontColor: 'rgba(210, 210, 210, 1)',
+                    fontColor: 'rgba(255, 255, 255, 1)',
                     fontSize: 15
                 },
                 scaleLabel: {
                     display: true,
                     labelString: 'Energy Per Bit (nJ)',
-                    fontColor: 'rgba(210, 210, 210, 1)',
+                    fontColor: 'rgba(164, 134, 42, 1)',
                     fontSize: 20
                 },
                 gridLines: {
-                    color: 'rgba(180, 180, 180, 1)' // makes grid lines from y axis red
+                    color: 'rgba(255, 255, 255, 1)' // makes grid lines from y axis red
                   }
             }
         

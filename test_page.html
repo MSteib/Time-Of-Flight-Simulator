@@ -6,13 +6,13 @@
 
         <style>
                 body { 
-                    background-color: #31445a;
+                    background-color: #2E3561;
                     
                 }
 
                 div.data_div {
                      outline: 2px dashed #aabed4;
-                     margin: 5px 5px 5px 5px;
+                     margin: 2px 2px 2px 2px;
                      min-width: 300px;
                      min-height: 300px;
                 }
@@ -42,17 +42,21 @@
 
 <div id="schem_and_plot" class="content" style="width:100%; height:100%">
 
-    <div class="data_div" style="width:48%; height:100%; min-height: 500px; float:left">
-            <object data="Images/camera.svg" id="alphasvg"></object>
-           
-
+    <div class="data_div" style="width:49%; height:100%; min-height: 200px; max-height: 450px; float:left">
+            <object data="Images/camera.svg" id="alphasvg" style="min-height: 200px; max-height: 450px; width: 100%"></object>
     </div>
 
-    <div class="data_div" style="width:48%; height:100%;  min-height: 500px; float:right">
-            <canvas id="chart_canvas" style="min-height: 500px;"></canvas>
+    <div class="data_div" style="width:49%; height:100%;  min-height: 200px; max-height: 450px; float:right">
+            <canvas id="chart_canvas" style="min-height: 200px; max-height: 450px"></canvas>
     </div>
     <br style="clear:both;"/>
 </div>
+
+
+<script src="schObj.js"></script>
+<script src="numjs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="TOF.js"></script>
 
 <script>
         var a = document.getElementById("alphasvg");
@@ -64,17 +68,16 @@
             // get the inner DOM of alpha.svg
             
             var svgDoc = a.contentDocument;
-            debugger
+           console.log(svgDoc)
             // get the inner element by id
-           // var delta = svgDoc.getElementById("delta");
+            var delta = svgDoc.getElementById("imager_x5F_specs").textContent = "1280x1024";
+            var delta = svgDoc.getElementById("aperture_x5F_specs").textContent = "5 mm";
             // add behaviour
         }, false);
         
         </script>
 
-<script src="schObj.js"></script>
-<script src="numjs.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-<script src="TOF.js"></script>
+<script>
+</script>
 </body>
 </html>
